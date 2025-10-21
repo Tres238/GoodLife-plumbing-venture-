@@ -1,0 +1,132 @@
+/* =========================
+   NAVBAR
+========================= */
+nav {
+  background: #003366;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column; /* Mobile first */
+  align-items: center;
+  gap: 15px;
+}
+
+nav .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row; /* Stack links on mobile */
+  gap: 10px;
+  width: 100%;
+  padding-left: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* DESKTOP NAV */
+@media (min-width: 769px) {
+  nav {
+    flex-direction: row;         
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+  }
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section {
+  padding: 50px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-section h1 {
+  text-align: center;
+  color: #003366;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #003366;
+  box-shadow: 0 0 5px rgba(0, 51, 102, 0.3);
+}
+
+.submit-btn {
+  padding: 12px 20px;
+  background-color: #003366;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0055a0;
+}
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
