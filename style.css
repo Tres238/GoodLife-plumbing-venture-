@@ -1,0 +1,136 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== HEADER & NAV ===== */
+header {
+  background-image: url("https://i.ibb.co/27rSrMB9/Good-Life-Plumbing-Venture-20251018-070344-0000.png"); 
+  background-size: contain;      /* Show full design */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  align-items: flex-start;       /* Push content slightly up */
+  justify-content: center;       /* Center horizontally */
+  padding-top: 20px;             /* Adjust nav vertical position */
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #dfe9ff;
+}
+
+/* ===== BODY BACKGROUND ===== */
+body {
+  background: radial-gradient(circle, #89CFF0, #003566);
+}
+
+/* ===== GALLERY ===== */
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-box {
+  width: calc(50% - 20px);  /* Two per row */
+  max-width: 320px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ===== MAIN CONTENT SECTIONS ===== */
+section {
+  padding: 50px 20px;
+}
+
+h1, h2, p {
+  color: #fff;
+}
+
+/* ===== VIEW FULL GALLERY LINK ===== */
+.view-gallery {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.view-gallery:hover {
+  color: #dfe9ff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .gallery-box {
+    width: calc(50% - 15px);  /* Keep 2 per row on tablets */
+    height: 200px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-box {
+    width: calc(50% - 10px); /* Two per row on mobile */
+    height: 180px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-box {
+    width: calc(33.33% - 20px); /* Three per row on large screens */
+    height: 240px;
+  }
+}
